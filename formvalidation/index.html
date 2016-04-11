@@ -1,0 +1,45 @@
+<html>
+<head>
+  <title>Form Validation</title>
+  <link rel="stylesheet" type="text/css" href="form.css"/>
+<script src="https://code.jquery.com/jquery-2.2.2.min.js"
+    type="text/javascript"></script>
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js">
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+    var validation = $("#jonForm").validate(
+    {
+    rules: { 
+      name:  { required: true, minlength: 2 },
+      email: { required: true, email: true },
+      comments:   { required: true, minlength: 2 }
+    }
+  });
+});
+</script>
+</head>
+<body>
+	<form id="jonForm" method="post" action="http://cscie12.dce.harvard.edu/echo">
+<fieldset>
+   <legend>Contact Us!</legend>
+   <p>
+     <label for="name">Name (Required) </div></label><br/>
+     <input id="name" name="name" size="25"/>
+   </p>
+   <p>
+     <label for="email">Email Address (Required)</label><br/>
+     <input id="email" name="email" size="25"/>
+   </p>
+   <p>
+     <label for="comments">Comments (Required)</label><br/>
+     <input id="comments" name="comments" size="50"  value="" />
+   </p>
+ <p>
+     <input class="submit" type="submit" value="Submit"/>
+   </p>
+ </fieldset>
+ </form>
+</body>
+</html>

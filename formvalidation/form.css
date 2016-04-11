@@ -1,0 +1,17 @@
+body {
+	margin: 2em;
+	font-family: sans-serif;
+}
+
+input, textarea { 
+	border: thin solid black;
+}
+input.error {
+	border: thin solid red;
+}
+label.error {
+	background: url('images/sad.png') no-repeat;
+	padding-left: 25px;
+	margin-left: .5em;
+	color: red;
+}
